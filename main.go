@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Hello, world!")
+	todos := Todos{}
+	todos.add("buy milk")
+	todos.add("buy products")
+	fmt.Println("%+v\n\n", todos)
+	todos.delete(2)
+	fmt.Println("%+v", todos)
 }
